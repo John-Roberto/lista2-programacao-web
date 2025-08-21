@@ -1,0 +1,245 @@
+:root {
+    /* Turquesa mais evidente */
+    --accent: #00D8CC;
+    /* mais vívido */
+    --bg: #0b0d10;
+    /* preto um pouco mais claro */
+    --text: #ffffff;
+    --muted: rgba(255, 255, 255, 0.88);
+    --glass-bg: rgba(16, 18, 20, 0.55);
+    /* glass levemente mais claro */
+    --glass-border: rgba(0, 216, 204, 0.10);
+    /* usar novo tom */
+    --accent-grad-1: rgba(0, 216, 204, 0.98);
+    --accent-grad-2: rgba(0, 150, 140, 0.85);
+}
+
+/* Base */
+* {
+    box-sizing: border-box;
+}
+
+body.theme-dark {
+    background:
+        radial-gradient(1200px 600px at 10% 10%, rgba(0, 216, 204, 0.06), transparent 10%),
+        radial-gradient(900px 480px at 95% 90%, rgba(0, 216, 204, 0.04), transparent 14%),
+        var(--bg);
+    color: var(--text);
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+}
+
+/* Decorative blurred blobs */
+.bg-blob {
+    position: fixed;
+    pointer-events: none;
+    z-index: 0;
+    mix-blend-mode: screen;
+}
+
+.blob-top {
+    top: -6%;
+    left: -8%;
+    width: 560px;
+    height: 560px;
+    background:
+        radial-gradient(circle at 30% 30%, var(--accent-grad-1), transparent 36%),
+        radial-gradient(circle at 70% 70%, var(--accent-grad-2), transparent 32%);
+    filter: blur(84px) saturate(130%);
+    opacity: 0.42;
+    /* mais visível turquesa */
+}
+
+.blob-bottom {
+    right: -10%;
+    bottom: -8%;
+    width: 700px;
+    height: 700px;
+    background:
+        radial-gradient(circle at 40% 40%, rgba(0, 216, 204, 0.08), transparent 30%),
+        radial-gradient(circle at 70% 60%, rgba(0, 216, 204, 0.05), transparent 30%);
+    filter: blur(110px) saturate(115%);
+    opacity: 0.34;
+}
+
+/* nav glass: subtle frosted glass + gradient */
+.nav-glass {
+    position: relative;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(6px) saturate(125%);
+    -webkit-backdrop-filter: blur(6px) saturate(125%);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.48);
+    z-index: 25;
+}
+
+/* Brand gradient text - mais vivo */
+.brand-gradient .bi {
+    color: var(--accent);
+}
+
+.brand-gradient .brand-text {
+    background: linear-gradient(90deg, var(--accent-grad-1), var(--accent-grad-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+}
+
+/* Footer glass */
+.footer-glass {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.012), rgba(255, 255, 255, 0.006));
+    backdrop-filter: blur(10px) saturate(120%);
+    -webkit-backdrop-filter: blur(10px) saturate(120%);
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Cards with frosted glass (um pouco mais claro) */
+.card {
+    width: 100%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.012));
+    border: 1px solid var(--glass-border);
+    color: var(--text);
+    border-radius: 12px;
+    padding: 0.75rem;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    box-shadow: 0 10px 32px rgba(2, 6, 23, 0.55);
+}
+
+/* Card header/title accent */
+.card .card-title {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+/* Muted text override */
+.text-muted,
+.small.text-muted,
+.card .text-muted,
+.navbar .text-muted,
+footer .text-muted,
+.lead.text-muted {
+    color: var(--muted) !important;
+}
+
+/* Card content */
+.card .card-text,
+.card p {
+    color: var(--muted);
+}
+
+/* Accent buttons with stronger gradient + glow */
+.btn-accent {
+    background: linear-gradient(90deg, var(--accent-grad-1), var(--accent-grad-2));
+    color: #001;
+    border: none;
+    box-shadow: 0 8px 20px rgba(0, 216, 204, 0.10), inset 0 -2px 8px rgba(0, 0, 0, 0.25);
+    transition: transform 160ms ease, box-shadow 160ms ease, filter 160ms ease;
+    border-radius: 10px;
+}
+
+.btn-accent:hover,
+.btn-accent:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 36px rgba(0, 216, 204, 0.16);
+    filter: brightness(1.04);
+}
+
+/* Outline light adjusted */
+.btn-outline-light {
+    color: var(--muted);
+    border-color: rgba(255, 255, 255, 0.07);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.012), rgba(255, 255, 255, 0.006));
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus {
+    color: var(--accent);
+    border-color: rgba(0, 216, 204, 0.22);
+}
+
+/* Form controls dark + inner glass (um toque mais claro) */
+.form-control.form-control-dark {
+    background: rgba(18, 20, 22, 0.62);
+    color: var(--text);
+    border: 1px solid rgba(0, 216, 204, 0.06);
+    border-radius: 8px;
+    padding: .5rem .75rem;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.form-control.form-control-dark:focus {
+    box-shadow: 0 0 0 0.3rem rgba(0, 216, 204, 0.07);
+    border-color: rgba(0, 216, 204, 0.26);
+}
+
+/* Placeholder */
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.66);
+    opacity: 1;
+}
+
+/* small screens */
+@media (max-width: 575.98px) {
+    .container {
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+    }
+
+    .navbar-brand span {
+        font-size: 0.95rem;
+        max-width: 140px;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .card {
+        margin-bottom: 0.9rem;
+        border-radius: 10px;
+        padding: .6rem;
+    }
+
+    .bg-blob {
+        display: none;
+    }
+
+    /* hide heavy blur on low widths to save perf */
+}
+
+/* prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .btn-accent,
+    .btn-outline-light,
+    .navbar,
+    .card {
+        transition: none !important;
+        transform: none !important;
+    }
+}
+
+/* Utilities */
+.text-white-strong {
+    color: #ffffff !important;
+}
+
+.border-2 {
+    border-width: 2px !important;
+}
+
+.navbar .nav-link {
+    color: var(--text);
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: var(--accent);
+}
