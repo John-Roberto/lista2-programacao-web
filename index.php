@@ -20,7 +20,7 @@ $template->renderHeader('Início');
     $exercises = [
         ['file' => 'ex01.php', 'title' => 'Exercício 1', 'desc' => 'Retângulo - cálculo de área, perímetro e verificação de quadrado.'],
         ['file' => 'ex02.php', 'title' => 'Exercício 2', 'desc' => 'Calculadora - operações aritméticas, funções e desfazer última operação.'],
-        ['file' => 'ex03.php', 'title' => 'Exercício 3', 'desc' => 'Placeholder - lógica do exercício 3.'],
+        ['file' => 'ex03.php', 'title' => 'Exercício 3', 'desc' => 'Carro - simula consumo (km/l), abastecimento e dirigir (reduz combustível).'],
         ['file' => 'ex04.php', 'title' => 'Exercício 4', 'desc' => 'Placeholder - lógica do exercício 4.'],
         ['file' => 'ex05.php', 'title' => 'Exercício 5', 'desc' => 'Placeholder - lógica do exercício 5.'],
     ];
