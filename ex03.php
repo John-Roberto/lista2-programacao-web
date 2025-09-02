@@ -9,7 +9,7 @@ $template->renderHeader('Exercício 1');
 
 <div class="card mb-4">
     <div class="card-body">
-        <h2 class="h5 card-title">Exercício 1 — Título do exercício</h2>
+        <h2 class="h5 card-title">Exercício 1 - Título do exercício</h2>
         <p class="text-muted">Descrição curta: aqui vai o que o exercício deve fazer. Substitua por seu requisito.</p>
 
         <!-- Área de resultado / formulário -->

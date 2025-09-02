@@ -93,7 +93,7 @@ HTML;
 
 <footer class="py-4 footer-glass text-center border-top" style="border-color: rgba(0,216,204,0.10) !important;">
   <div class="container">
-    <small class="text-muted">Desenvolvido por João Roberto Peres Lanza — {$year}</small>
+    <small class="text-muted">Desenvolvido por João Roberto Peres Lanza - {$year}</small>
   </div>
 </footer>
 

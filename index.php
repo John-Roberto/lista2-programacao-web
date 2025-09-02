@@ -18,11 +18,11 @@ $template->renderHeader('Início');
 <div class="row g-3">
     <?php
     $exercises = [
-        ['file' => 'ex01.php', 'title' => 'Exercício 1', 'desc' => 'Placeholder — lógica do exercício 1.'],
-        ['file' => 'ex02.php', 'title' => 'Exercício 2', 'desc' => 'Placeholder — lógica do exercício 2.'],
-        ['file' => 'ex03.php', 'title' => 'Exercício 3', 'desc' => 'Placeholder — lógica do exercício 3.'],
-        ['file' => 'ex04.php', 'title' => 'Exercício 4', 'desc' => 'Placeholder — lógica do exercício 4.'],
-        ['file' => 'ex05.php', 'title' => 'Exercício 5', 'desc' => 'Placeholder — lógica do exercício 5.'],
+        ['file' => 'ex01.php', 'title' => 'Exercício 1', 'desc' => 'Retângulo - cálculo de área, perímetro e verificação de quadrado.'],
+        ['file' => 'ex02.php', 'title' => 'Exercício 2', 'desc' => 'Placeholder - lógica do exercício 2.'],
+        ['file' => 'ex03.php', 'title' => 'Exercício 3', 'desc' => 'Placeholder - lógica do exercício 3.'],
+        ['file' => 'ex04.php', 'title' => 'Exercício 4', 'desc' => 'Placeholder - lógica do exercício 4.'],
+        ['file' => 'ex05.php', 'title' => 'Exercício 5', 'desc' => 'Placeholder - lógica do exercício 5.'],
     ];
 
     foreach ($exercises as $ex): ?>
