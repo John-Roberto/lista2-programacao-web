@@ -22,7 +22,7 @@ $template->renderHeader('Início');
         ['file' => 'ex02.php', 'title' => 'Exercício 2', 'desc' => 'Calculadora - operações aritméticas, funções e desfazer última operação.'],
         ['file' => 'ex03.php', 'title' => 'Exercício 3', 'desc' => 'Carro - simula consumo (km/l), abastecimento e dirigir (reduz combustível).'],
         ['file' => 'ex04.php', 'title' => 'Exercício 4', 'desc' => 'Data - manipulação de datas, incremento/decremento, comparação e cálculo de diferença.'],
-        ['file' => 'ex05.php', 'title' => 'Exercício 5', 'desc' => 'Placeholder - lógica do exercício 5.'],
+        ['file' => 'ex05.php', 'title' => 'Exercício 5', 'desc' => 'Voo - controle de assentos (até 100), verificação, ocupação e informações do voo.'],
     ];
 
     foreach ($exercises as $ex): ?>
